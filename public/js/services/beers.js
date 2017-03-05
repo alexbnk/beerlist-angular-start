@@ -51,8 +51,35 @@ var beers = [
 }
   ];
 
+var addBeer = function(name,style,abv,image) {
+
+  console.log ("Beers list has "+beers.length+ " items");
+  console.log("addBeer function called within beersFactory with theses paramaters:")
+  console.log(name,style,abv,image);
+  var tempBeer= {name: name, style: style, abv: abv,image_url: image};
+  beers.push(tempBeer);
+  console.log ("Beers list after push has "+beers.length+ " items");
+
+};
+
+var removeBeer = function(id) {
+
+  console.log ("Beers list has "+beers.length+ " items");
+  console.log("removeBeer function called within beersFactory with theses paramaters:")
+  console.log(id);
+  beers.splice(id,1);
+  console.log("Beer ID: "+id+" was removed");
+  console.log ("Beers list after push has "+beers.length+ " items");
+
+};
+
+
+
+
   var beersObj = {
-    beers:beers
+    beers:beers,
+    addBeer: addBeer,
+    removeBeer:removeBeer
     };
 
 
