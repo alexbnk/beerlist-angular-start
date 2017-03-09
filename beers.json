@@ -1,0 +1,132 @@
+{
+    name:"Corona 1",
+    style: "light",
+    abv: 5.9,
+    image_url:"/img/Corona-Beer.jpg",
+    ratings:[5,4,3,2,1],
+    rating:3
+  }
+  {
+      name: "Molson's Canadian",
+      style: "Lager",
+      abv: "MOL",
+      image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Molson_Canadian.svg/1042px-Molson_Canadian.svg.png",
+      ratings:[5],
+      rating: 5
+    }
+    {
+      name: "Moosehead",
+      style: "Moose piss",
+      abv: "MH",
+      image_url: "http://moosehead.ca/wp-content/uploads/2015/10/cropped-moosehead_logo-180x180.png",
+      ratings:[5],
+      rating: 5
+    }
+    {
+      name: "Alexander Keith's",
+      style: "IPA",
+      abv: "AK",
+      image_url: "https://c1.staticflickr.com/9/8466/8140544321_75da7d4171.jpg",
+      ratings:[3],
+      rating: 3
+
+    }
+    {
+      name: "Coor's",
+      style: "Light Lager",
+      abv: "Coors",
+      image_url: "http://vignette3.wikia.nocookie.net/itsalwayssunny/images/b/bd/Coors_Light_Logo.jpg/revision/latest?cb=20110903221221",
+      ratings:[4],
+      rating: 4
+
+    }
+{
+            name: "Carlsberg",
+            style: "light",
+            abv: 5,
+            ratings: [5, 4, 3, 2, 1],
+            rating: 2,
+            image_url: "http://vector.me/files/images/4/1/41842/carlsberg.png"
+        }
+        {
+            name: "Heiniken",
+            style: "imported",
+            abv: 3,
+            ratings: [5, 4, 3, 2, 1],
+            rating: 1,
+            image_url: "http://logok.org/wp-content/uploads/2014/06/Heineken-logo-green.png"
+        }
+        {
+            name: "Stella",
+            style: "imported",
+            abv: 3,
+            ratings: [5, 4, 3, 2, 1],
+            rating: 1,
+            image_url: "http://vignette3.wikia.nocookie.net/beer/images/3/39/ABI274_05_Stella_Artois_master_Logo.png/revision/latest?cb=20150729143600"
+        }
+        {
+            name: "Heiniken",
+            style: "imported",
+            abv: 3,
+            ratings: [5, 4, 3, 2, 1],
+            rating: 1,
+            image_url: "http://www.famouslogos.us/images/heineken-beer-logo.jpg"
+        }
+        {
+            name: "pinimg",
+            style: "imported",
+            abv: 3,
+            ratings: [5, 4, 3, 2, 1],
+            rating: 1,
+            image_url: "https://s-media-cache-ak0.pinimg.com/originals/ff/8e/9e/ff8e9e732c1c784e145615d46452a301.jpg"
+        }
+        {
+            image_url: "http://i.dailymail.co.uk/i/pix/2015/09/25/05/2CBD1E9600000578-3248495-image-a-13_1443154964270.jpg",
+            abv: 27,
+            style: "green",
+            name: "Hallie Blair",
+            ratings: [5, 4, 3, 2, 1],
+            rating: 5
+        }
+        {
+            name: "Corona 1",
+            style: "light",
+            abv: 5.9,
+            image_url: "http://fontslogo.com/wp-content/uploads/2013/04/Corona-Logo-Font.jpg",
+            ratings: [5, 4, 3, 2, 1],
+            rating: 3
+        }
+        {
+            name: "Molson's Canadian",
+            style: "Lager",
+            abv: "MOL",
+            image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Molson_Canadian.svg/1042px-Molson_Canadian.svg.png",
+            ratings: [5],
+            rating: 5
+        }
+        {
+            name: "Moosehead",
+            style: "Moose piss",
+            abv: "MH",
+            image_url: "http://moosehead.ca/wp-content/uploads/2015/10/cropped-moosehead_logo-180x180.png",
+            ratings: [5],
+            rating: 5
+        }
+        {
+            name: "Alexander Keith's",
+            style: "IPA",
+            abv: "AK",
+            image_url: "https://c1.staticflickr.com/9/8466/8140544321_75da7d4171.jpg",
+            ratings: [3],
+            rating: 3
+
+        }
+        {
+            name: "Coor's",
+            style: "Light Lager",
+            abv: "Coors",
+            image_url: "http://vignette3.wikia.nocookie.net/itsalwayssunny/images/b/bd/Coors_Light_Logo.jpg/revision/latest?cb=20110903221221",
+            ratings: [4],
+            rating: 4
+
+        }
