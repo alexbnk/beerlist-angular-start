@@ -14,7 +14,7 @@
                 </div>
 
                 <form ng-controller="submitBeerCtrl" ng-submit="addBeer()">
-                  <!-- <form ng-submit="addBeer()"> -->
+                    <!-- <form ng-submit="addBeer()"> -->
                     <h3>Add a new beer</h3>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Beer Name" ng-model="name"></input>
@@ -28,29 +28,79 @@
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Image URL" ng-model="image"></input>
                     </div>
-                    <button type="submit" class="btn btn-primary" >Add</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
                 </form>
-</div>
-
-                <div class="beers" ng-controller="beersListCtrl" style="display: inline" >
-                  <div class="row">
-
-                  </div>
-                  <div ng-repeat="beer in beers  track by $index"  class="col-md-3" >
-                    <img ng-src="{{beer.image_url}}" class="img-responsive">
-                    <h3>Name: {{beer.name}} <button class="btn btn-danger pull-right " ng-click="removeBeer($index)">Delete</button></h3>
-                    <h4>Style: {{beer.style}}<h4>
-                    <h5>ABV: {{beer.abv}}</h5>
-
-
-                  <!-- render beers here -->
-                </div>
-</div>
-
             </div>
         </div>
     </div>
-  </div>
+
+    <div class="container beers" ng-controller="beersListCtrl">
+          <button class="btn btn-xs btn-link pull-right" ng-click="sort()">Sort by Rating
+                    <span ng-if=" doOrder === true">Descending</span>
+                    <span ng-if=" doOrder === false">Ascending</span>
+                  </button>
+
+
+
+        <div class="row">
+
+            <!-- <div ng-repeat="beer in beers track by beer.id"> -->
+                <div ng-repeat="beer in beers | orderBy : 'rating' :doOrder  track by beer.id">
+                <img ng-src="{{beer.image_url}}" style="width: 150px;" />
+                <h3>Name: {{beer.name}} <button class="btn btn-danger pull-right " ng-click="removeBeer(beer.id)">Delete</button></h3>
+                <h5>ABV: {{beer.abv}}</h5>
+                <h6>Rate: {{beer.rating}} based on {{beers[beer.id].ratings.length}} ratings</h6>
+
+                <div ng-if="beer.rating == '0' ">
+                    <i class="glyphicon glyphicon-star empty" ng-click="rateThis(beer.id,1)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,2)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                </div>
+                <div ng-if="beer.rating == '1' ">
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,2)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                </div>
+                <div ng-if="beer.rating =='2' ">
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                </div>
+                <div ng-if="beer.rating == '3' ">
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                </div>
+                <div ng-if="beer.rating == '4' ">
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,3)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                </div>
+                <div ng-if="beer.rating == '5' ">
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,3)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,4)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,5)"></i>
+                </div>
+
+                <!-- render beers here -->
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
     <script src="angular/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/services/beers.js"></script>
