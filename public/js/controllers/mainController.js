@@ -2,6 +2,8 @@ app.controller('submitBeerCtrl', function($scope,beersFactory){
 
 //$scope.beers=beersFactory.beersObj;
 
+theBeers = beersFactory.theBeers;
+theBeers();
 
 $scope.addBeer = function() {
 

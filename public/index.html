@@ -43,55 +43,55 @@
 
 
         <div class="row">
-
+<div class="col-md-6 col-md-offset-3">
             <!-- <div ng-repeat="beer in beers track by beer.id"> -->
-                <div ng-repeat="beer in beers | orderBy : 'rating' :doOrder  track by beer.id">
+                <div ng-repeat="beer in beers track by beer._id">
                 <img ng-src="{{beer.image_url}}" style="width: 150px;" />
-                <h3>Name: {{beer.name}} <button class="btn btn-danger pull-right " ng-click="removeBeer(beer.id)">Delete</button></h3>
+                <h3>Name: {{beer.name}} <button class="btn btn-danger pull-right " ng-click="removeBeer(beer._id)">Delete</button></h3>
                 <h5>ABV: {{beer.abv}}</h5>
-                <h6>Rate: {{beer.rating}} based on {{beers[beer.id].ratings.length}} ratings</h6>
+                <h6>Rate: {{beer.rating}} based on {{beers[beer._id].ratings.length}} ratings</h6>
 
                 <div ng-if="beer.rating == '0' ">
-                    <i class="glyphicon glyphicon-star empty" ng-click="rateThis(beer.id,1)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,2)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,3)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                    <i class="glyphicon glyphicon-star empty" ng-click="rateThis(beer._id,1)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,2)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,5)"></i>
                 </div>
                 <div ng-if="beer.rating == '1' ">
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,2)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,3)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,1)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,2)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,5)"></i>
                 </div>
                 <div ng-if="beer.rating =='2' ">
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,3)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,2)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,5)"></i>
                 </div>
                 <div ng-if="beer.rating == '3' ">
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,3)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,4)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,2)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,3)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,5)"></i>
                 </div>
                 <div ng-if="beer.rating == '4' ">
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,3)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,4)"></i>
-                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer.id,5)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,2)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,3)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,4)"></i>
+                    <i class="glyphicon glyphicon-star-empty" ng-click="rateThis(beer._id,5)"></i>
                 </div>
                 <div ng-if="beer.rating == '5' ">
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,1)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,2)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,3)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,4)"></i>
-                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer.id,5)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,1)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,2)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,3)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,4)"></i>
+                    <i class="glyphicon glyphicon-star text-warning" ng-click="rateThis(beer._id,5)"></i>
                 </div>
 
                 <!-- render beers here -->
